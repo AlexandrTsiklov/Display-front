@@ -1,0 +1,20 @@
+.app {
+    width: 700px;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    color: white;
+}
+
+.mainHeader {
+    margin: 40px auto;
+}
+
+.result {
+    color: rgb(187, 187, 187);
+}
+
+@media (max-width: 700px) {
+    .app {
+        width: 450px;
+    }
+}

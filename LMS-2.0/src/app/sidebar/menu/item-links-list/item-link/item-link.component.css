@@ -1,0 +1,28 @@
+.menu__item {
+}
+
+.menu__item-link {
+    display: block;
+    padding: 7px 10px;
+    border-radius: 7px;
+}
+
+.menu__item-link:hover {
+    background-color: #b2d1ff;
+    color: white;
+}
+
+.menu__item-link_active {
+    background-color: #0f74ed;
+    color: white;
+    /*pointer-events: none;*/
+    /*cursor: default;*/
+}
+
+.menu__item-link_active:hover {
+    background-color: #0f74ed;
+}
+
+.menu__item-text {
+    font-size: 16px;
+}

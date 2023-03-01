@@ -1,0 +1,104 @@
+.disabled-course {
+    opacity: 50%;
+    pointer-events: none !important;
+}
+
+.courses__semester-subject-content-container {
+    padding-bottom: 20px;
+    border-radius: 7px;
+    background: white;
+}
+
+.courses__semester-subject {
+    width: 212px;
+    min-height: 232px;
+    border-radius: 7px;
+    box-shadow: 0 0 3px #a7a7a7;
+    color: var(--text-color-dark-gray);
+    font-size: 16px;
+    transition-duration: 0.3s;
+}
+
+.courses__semester-subject:hover {
+    box-shadow: 3px 3px 4px #d9d9d9;
+    scale: 1.05;
+}
+
+.courses__semester-subject-img-container {
+    height: 172px;
+    width: 100%;
+    border-radius: 7px 7px 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.courses__semester-subject-text-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    width: 100%;
+    min-height: 70px;
+}
+
+.courses__semester-subject-progressbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.courses__semester-subject-progressbar-outer {
+    position: relative;
+    height: 14px;
+    width: 100%;
+    background: #E0E0E0;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.courses__semester-subject-progressbar-inner {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.courses__semester-subject-progressbar-to-30 {
+    background: rgb(182,23,23);
+    background: linear-gradient(90deg, rgba(182,23,23,1) 0%, rgba(217,59,0,0.7122199221485469) 78%, rgba(255,107,0,1) 100%);
+}
+
+.courses__semester-subject-progressbar-to-45 {
+    background: rgb(182,23,23);
+    background: linear-gradient(90deg, rgb(181, 95, 95) 0%, rgb(255, 153, 72) 78%, rgb(255, 170, 0) 100%);
+}
+
+.courses__semester-subject-progressbar-to-60 {
+    background: rgb(182,23,23);
+    background: linear-gradient(90deg, rgba(182,23,23,0.6561975131849616) 0%, rgba(255,199,0,1) 100%);
+}
+
+.courses__semester-subject-progressbar-to-77 {
+    background: rgb(169, 57, 57);
+    background: linear-gradient(90deg, rgb(176, 65, 65) 0%, rgba(255,168,0,1) 31%, rgba(255,214,0,0.8326681014202556) 100%);
+}
+
+.courses__semester-subject-progressbar-to-90 {
+    background: rgb(255,214,0);
+    background: linear-gradient(90deg, rgba(255,214,0,0.8130602582830007) 0%, rgba(0,255,148,0.5665616588432247) 100%);
+}
+
+.courses__semester-subject-progressbar-to-100 {
+    background: rgb(0,255,148);
+    background: linear-gradient(90deg, rgba(0,255,148,0.1632003143054097) 0%, rgba(0,255,102,0.8270658605238971) 100%);
+}
+
+.percents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}

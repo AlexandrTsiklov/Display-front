@@ -1,0 +1,64 @@
+.courses-header {
+    justify-content: center;
+}
+
+.header-text_date-style {
+    margin-left: 20px;
+}
+
+.courses__semester {
+    padding: 0 var(--main-padding);
+    margin-bottom: 40px;
+}
+
+.courses__semester_dark {
+    background: #ffffff;
+}
+
+.courses__semester-header {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 550;
+    color: var(--text-color-dark-gray);
+    text-align: center;
+}
+
+.switch-courses-container {
+    display: flex;
+    margin-left: auto;
+    border-radius: 6px;
+    /*box-shadow: 0 0 2px #b4b4b4;*/
+}
+
+.switch-courses-item {
+    padding: 7px 12px;
+    background: #eaeaea;
+    color: var(--text-color-dark-gray);
+    font-size: 16px;
+}
+
+.switch-courses-item:hover {
+    background: #b2d1ff;
+    color: white;
+    cursor: pointer;
+}
+
+.switch-courses-item:active {
+    transform: translateY(1px);
+}
+
+.switch-courses-item:first-child {
+    border-radius: 6px 0 0 6px;
+    border-right: 1px solid var(--border-color);
+}
+
+.switch-courses-item:last-child {
+    border-radius: 0 6px 6px 0;
+}
+
+.switch-courses-item_active {
+    background: var(--border-color);
+    color: white;
+    pointer-events: none;
+    cursor: default;
+}

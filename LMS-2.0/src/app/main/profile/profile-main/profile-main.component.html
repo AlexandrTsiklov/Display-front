@@ -1,0 +1,48 @@
+<div class="main-header-common">
+  <div class="header-only-name">
+    <div class="header-text_name-style">
+      Трудолюбивая Виктория Александоровна
+    </div>
+  </div>
+</div>
+<div class="main-content-common">
+  <div class="profile-main">
+    <div class="profile-main__ava-container">
+      <img class="profile-main__ava-img" src="{{ avatarManagerService.activeImage.url }}" alt="avatar">
+      <a routerLink="./edit"><div class="profile-main__edit-text-container">Редактировать профиль</div></a>
+    </div>
+    <div class="profile-main__info-container">
+      <div class="profile-main__info-line">
+        <div class="profile-main__info-line-name">Телефон</div>
+        <div class="profile-main__info-line-value">{{ profileData.phoneNumber }}</div>
+      </div>
+      <div class="profile-main__info-line">
+        <div class="profile-main__info-line-name">E-mail</div>
+        <div class="profile-main__info-line-value">{{ profileData.email }}</div>
+      </div>
+      <div class="profile-main__info-line">
+        <div class="profile-main__info-line-name">СНИЛС</div>
+        <div class="profile-main__info-line-value">{{ profileData.snils }}</div>
+      </div>
+      <hr style="margin-bottom: 20px; border: 1px solid #ededed; background: #ededed">
+      <div class="profile-main__info-line">
+        <div class="profile-main__info-line-name">Направление</div>
+        <div class="profile-main__info-line-value">
+          {{ profileData.education.faculty }}, {{ profileData.education.degree }}
+        </div>
+      </div>
+      <div class="profile-main__info-line">
+        <div class="profile-main__info-line-name">Профиль</div>
+        <div class="profile-main__info-line-value">{{ profileData.education.specialization }}</div>
+      </div>
+      <div class="profile-main__info-line">
+        <div class="profile-main__info-line-name">Обучение</div>
+        <div class="profile-main__info-line-value">{{ profileData.education.entranceYear }} - {{ profileData.education.graduationYear }} гг.</div>
+      </div>
+      <div class="profile-main__info-line">
+        <div class="profile-main__info-line-name">Основа</div>
+        <div class="profile-main__info-line-value">{{ profileData.education.basis }}</div>
+      </div>
+    </div>
+  </div>
+</div>

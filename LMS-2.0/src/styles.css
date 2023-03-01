@@ -1,0 +1,62 @@
+@import '~normalize.css';
+
+:root {
+    --border-color: #c6c6c6;
+    --horizontal-padding-20: 20px;
+
+    --text-color-dark-gray: #474747;
+    --text-color-medium-gray: #a0a0a0;
+    --text-color-light-gray: #bbbbbb;
+
+    --background-light-silver: #fcfcfc;
+
+
+    --sidebar-width: auto;
+
+    --profile-height: 90px;
+    --profile-margin-vertical: 20px;
+    --profile-padding-horizontal: 20px;
+
+    --menu-padding-horizontal: 20px;
+
+    --main-padding: 50px;
+    --main-background: #f4f3f3;
+
+    --frame-margin-bottom: 20px;
+    --frame-horizontal-padding: 20px;
+    --frame-background: white;
+    --frame-border-radius: 9px;
+    --frame-font-size: 17px;
+
+    /* SCHOLARSHIP */
+    --scholarship-table-item-size: 150px;
+    --scholarship-table-item-padding: 10px;
+
+    /* EDIT PROFILE */
+    --edit-profile-item-size: 140px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover, button:hover {
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

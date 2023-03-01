@@ -1,0 +1,7 @@
+<div class="courses__semester">
+  <div *ngIf="showSemesterHeader" class="courses__semester-header">{{ semesterData.semester }} семестр</div>
+
+  <div class="courses__semester-content">
+    <app-courses-course *ngFor="let course of semesterData.courses" [course]="course"></app-courses-course>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.todoForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 420px;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+.toDoInputGroup {
+    height: 40px;
+    border-radius: 6px;
+}
+
+.toDoInput {
+    width: 340px;
+    padding-left: 10px;
+    font-size: 1rem;
+    background: rgb(229, 229, 229);
+}
+
+.submit {
+    width: 90px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 10px;
+    background: #f1f4bd;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+
+.submit:hover {
+    background: rgb(255, 255, 179);
+    cursor: pointer;
+    scale: 1.05;
+}
+
+@media (max-width: 700px) {
+    .todoForm {
+        flex-direction: column;
+    }
+
+    .toDoInput {
+      width: 70% !important;
+    }
+    .submit {
+        display: block !important;
+        margin-top: 15px;
+        width: 30%;
+    }
+}

@@ -1,0 +1,19 @@
+.orders-canvas {
+}
+
+.orders-frame {
+    padding-top: calc(var(--frame-horizontal-padding) + 10px);
+    padding-bottom: calc(var(--frame-horizontal-padding) + 10px);
+}
+
+.orders-frame-name {
+    font-weight: 550;
+    color: var(--text-color-dark-gray);
+    margin-bottom: 7px;
+}
+
+.orders-frame-info {
+    font-size: calc(var(--frame-font-size) - 2px);
+    color: var(--text-color-medium-gray)
+}
+

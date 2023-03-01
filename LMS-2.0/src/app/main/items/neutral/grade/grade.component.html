@@ -1,0 +1,35 @@
+<div class="main__container">
+  <div class="header-curriculum">
+    <div class="header-text_name-style">
+      Успеваемость
+    </div>
+    <div class="header-filter-container">
+      <select class="header-filter" [(ngModel)]="filterStatus">
+        <option value="all">за всё время</option>
+        <option *ngFor="let term of gradeData.terms" value="{{ term.numberOfTerm.toLowerCase() }}">{{ term.numberOfTerm.toLowerCase() }} семестр</option>
+      </select>
+    </div>
+    <div class="header-text_date-style">
+      <span style="color: var(--text-color-light-gray); font-weight: initial; padding-right: 10px">сегодня</span>
+      {{ currentDate | date:'dd.MM.yyyy' }}
+    </div>
+  </div>
+  <div class="curriculum">
+    <div *ngIf="filterStatus == 'all'" class="curriculum__total-results-container">
+      <div class="curriculum__total-score-container">
+        <div class="curriculum__total-text-value">Средний балл</div>
+        <div class="curriculum__total-score-value">{{ gradeData.totalAverageScore }}</div>
+      </div>
+      <div class="curriculum__total-rating-container">
+        <div class="curriculum__total-text-value">Средний рейтинг</div>
+        <div class="curriculum__total-score-value">94</div>
+      </div>
+    </div>
+    <div *ngIf="filterStatus == 'all'" class="curriculum__terms-container">
+      <app-grade-term *ngFor="let term of gradeData.terms" [term]="term"></app-grade-term>
+    </div>
+    <div *ngIf="filterStatus != 'all'" class="curriculum__terms-container">
+      <app-grade-term [term]="getTermByNumber()"></app-grade-term>
+    </div>
+  </div>
+</div>

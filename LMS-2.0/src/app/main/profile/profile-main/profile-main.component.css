@@ -1,0 +1,66 @@
+.profile-main {
+    display: flex;
+}
+
+.profile-main__ava-container {
+    position: relative;
+    align-self: flex-start;
+    width: 300px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    /*height: 100%;*/
+    /*border: 1px solid #cecece;*/
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 0 4px #b8b8b8;
+}
+
+.profile-main__ava-img {
+    display: block;
+    width: 100%;
+    /*height: auto;*/
+    border-radius: 8px 8px 0 0;
+}
+
+.profile-main__edit-text-container {
+    padding: 10px 0;
+    border-radius: 0 0 7px 7px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+    transition-duration: 0.3s;
+}
+
+.profile-main__edit-text-container:hover {
+    /*color: #000000;*/
+    background: #b2d1ff;
+    color: white;
+    /*transform: translateY(1px);*/
+    cursor: pointer;
+}
+
+.profile-main__info-container {
+    width: 100%;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 0 3px #c9c9c9;
+}
+
+
+.profile-main__info-line {
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.profile-main__info-line-name {
+    width: 150px;
+    flex-shrink: 0;
+    color: rgb(176, 176, 176);
+}
+
+.profile-main__info-line-value {
+    color: var(--text-color-dark-gray)
+}

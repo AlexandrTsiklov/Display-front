@@ -1,0 +1,28 @@
+<div class="courses__semester-subject" [ngClass]="{'disabled-course': course.shortName !== 'tvms' && course.shortName !== 'saod' && course.shortName !== 'mo'}">
+  <a [routerLink]="course.shortName">
+    <div class="courses__semester-subject-img-container" style="background-image: url('../../../../../../assets/images/subjects/{{ course.shortName }}.jpg');">
+    </div>
+    <div class="courses__semester-subject-content-container">
+      <div class="courses__semester-subject-text-container">
+      {{ course.name }}
+    </div>
+      <div class="courses__semester-subject-progressbar-container">
+        <div class="courses__semester-subject-progressbar-outer">
+          <div
+            class="courses__semester-subject-progressbar-inner"
+            [ngStyle]="{'width': (+course.score / +course.maxScore * 100) + '%'}"
+            [ngClass]="
+              { 'courses__semester-subject-progressbar-to-30': +course.score / +course.maxScore <= 0.3,
+                'courses__semester-subject-progressbar-to-45': +course.score / +course.maxScore > 0.3 && +course.score / +course.maxScore <= 0.45,
+                'courses__semester-subject-progressbar-to-60': +course.score / +course.maxScore > 0.45 && +course.score / +course.maxScore <= 0.6,
+                'courses__semester-subject-progressbar-to-77': +course.score / +course.maxScore > 0.6 && +course.score / +course.maxScore <= 0.77,
+                'courses__semester-subject-progressbar-to-90': +course.score / +course.maxScore > 0.77 && +course.score / +course.maxScore <= 0.9,
+                'courses__semester-subject-progressbar-to-100': +course.score / +course.maxScore > 0.77 && +course.score / +course.maxScore > 0.9
+              }">
+          </div>
+          <div class="percents">{{ Math.round(+course.score / +course.maxScore * 100) }}%</div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

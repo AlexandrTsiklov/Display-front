@@ -1,0 +1,71 @@
+<div class="main-header-common">
+  <div class="header-only-name">
+    <div class="header-text_name-style">
+      {{ courseName }}
+    </div>
+  </div>
+</div>
+<div class="main-content-common">
+  <div class="course-content">
+    <section class="course-content__section course-content__professors">
+      <div class="course-content__tasks-header">Преподаватели</div>
+      <div class="course-content__professors-container">
+        <div class="course-content__lector-container">
+          <div class="course-content__general-content-photo-container" style="background-image: url({{ lecturesInfo.photoUrl }})"></div>
+          <div class="course-content__general-content-info-container">
+            <div class="course-content__general-content-info-line course-content__general-content-info-line_header">{{ lecturesInfo.professorName }}</div>
+            <div class="course-content__general-content-info-line"><span class="title-span">Email: </span>{{ lecturesInfo.professorEmail }}</div>
+            <div class="course-content__general-content-info-line" *ngIf="lecturesInfo.professorPhone !== ''"><span class="title-span">Телефон: </span>{{ lecturesInfo.professorPhone }}</div>
+            <div class="course-content__general-content-info-line course-content__general-content-info-line_last">
+              <a href="{{ seminarsInfo.link}}">Ссылка на занятие</a>
+            </div>
+          </div>
+        </div>
+        <div class="course-content__seminarist-container">
+          <div class="course-content__general-content-photo-container" style="background-image: url({{ seminarsInfo.photoUrl }})"></div>
+          <div class="course-content__general-content-info-container">
+            <div class="course-content__general-content-info-line course-content__general-content-info-line_header">{{ seminarsInfo.professorName }}</div>
+            <div class="course-content__general-content-info-line"><span class="title-span">Email: </span>{{ seminarsInfo.professorEmail }}</div>
+            <div class="course-content__general-content-info-line" *ngIf="seminarsInfo.professorPhone !== ''"><span class="title-span">Телефон: </span>{{ seminarsInfo.professorPhone }}</div>
+            <div class="course-content__general-content-info-line course-content__general-content-info-line_last">
+              <a href="{{ seminarsInfo.link}}">Ссылка на занятие</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="course-content__section course-content__additional-materials">
+      <div class="course-content__tasks-header">Дополнительные материалы</div>
+      <div class="course-content__additional-info-container">
+        <div *ngFor="let material of additionalMaterials" class="course-content__additional-info-item">
+          <div class="course-content__additional-info-item-photo">
+            <img src="{{ material.photoUrl }}" width="40px" alt="ico">
+          </div>
+          <div class="course-content__additional-info-item-text">{{ material.name }}</div>
+        </div>
+      </div>
+    </section>
+    <section *ngIf="tasks?.length !== 0 && tasks"  class="course-content__section course-content__tasks">
+      <div class="course-content__tasks-header">Задания</div>
+      <div class="course-content__tasks-container">
+        <div *ngFor="let task of tasks; let last = last">
+          <a routerLink="{{ task.number }}">
+            <div
+              class="courses-content__task-item"
+              [ngClass]="{
+                'courses-content__task-item_last': last,
+                'courses-content__task-item_completed': task.status === 'completed',
+                'courses-content__task-item_active': task.status === 'active',
+                'courses-content__task-item_unavailable': task.status === 'unavailable'
+              }">
+              <div>
+                Задание {{ task.number }}. {{ task.name }}
+              </div>
+              <div *ngIf="task.status === 'completed'"><img src="../../../../../assets/images/icons/tick.svg" width="20px" alt="done"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

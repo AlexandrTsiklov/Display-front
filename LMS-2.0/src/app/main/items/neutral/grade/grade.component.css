@@ -1,0 +1,50 @@
+.header-curriculum {
+    display: flex;
+    align-items: center;
+    height: calc(var(--profile-height) + var(--profile-padding-horizontal));
+}
+
+.header-filter-container {
+    margin-left: calc(var(--main-padding) / 2);
+}
+
+.header-filter {
+    border-color: var(--border-color);
+    border-radius: 5px;
+    padding: 3px 10px;
+    color: var(--text-color-medium-gray);
+    font-size: 18px;
+    outline: none;
+}
+
+.header-text_date-style {
+    margin-left: auto;
+}
+
+.curriculum__total-score-value {
+    font-weight: 450;
+    color: var(--text-color-dark-gray);
+}
+
+.curriculum__total-results-container {
+    display: flex;
+    justify-content: space-between;
+    /*border: 1px solid black;*/
+    border-radius: 7px;
+    margin-bottom: calc(var(--frame-margin-bottom) * 2);
+    background: white;
+    box-shadow: 0 0 2px #999999;
+    color: var(--text-color-medium-gray);
+    font-size: 20px;
+}
+
+.curriculum__total-score-container, .curriculum__total-rating-container {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 10px var(--frame-horizontal-padding);
+}
+
+.curriculum__total-score-container {
+    border-right: 1px solid #dbdbdb;
+}

@@ -1,0 +1,19 @@
+.courses__semester {
+    padding-left: var(--main-padding);
+    padding-right: var(--main-padding);
+    padding-bottom: 30px;
+}
+
+.courses__semester-header {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    color: #545454;
+}
+
+.courses__semester-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}

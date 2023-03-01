@@ -1,0 +1,31 @@
+/* ------------------- GLOBAL ------------------- */
+
+header {
+    height: 60px;
+    border-bottom: 1px solid var(--border-color);
+    /*background: rgb(20,30,48);*/
+    /*background: linear-gradient(90deg, rgba(20,30,48,1) 35%, rgba(36,59,85,1) 100%);*/
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    /*height: 1px;*/
+}
+
+
+/* ------------------- SIDEBAR ------------------- */
+
+.sidebar {
+    min-width: 238px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--border-color);
+}
+
+
+/* --------------------- MAIN --------------------- */
+
+.main {
+    width: 100%;
+    background: var(--main-background);
+}

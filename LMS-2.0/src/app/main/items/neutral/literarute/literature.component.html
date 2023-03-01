@@ -1,0 +1,23 @@
+<div class="main__container">
+  <div class="header-name-and-date">
+    <div class="header-text_name-style">
+      Литература
+    </div>
+    <div class="header-text_date-style">
+      <span style="color: var(--text-color-light-gray); font-weight: initial; padding-right: 10px">сегодня</span>
+      {{ currentDate | date:'dd.MM.yyyy' }}
+    </div>
+  </div>
+  <div class="literature">
+    <div class="literature__image-container">
+      <img style="background: transparent;" width="240" height="480" src="../../../../../assets/images/reading-man.png" alt="Reading man">
+    </div>
+    <div>
+      <div class="literature__short-info">Список литературы пока пуст</div>
+      <div class="literature__text">
+        Для успешной учебы запасись книжками из библиотеки.<br>
+        Только не забудь их вовремя вернуть.
+      </div>
+    </div>
+  </div>
+</div>

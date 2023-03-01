@@ -1,0 +1,29 @@
+<div class="main-header-common">
+  <div class="header-name-and-date courses-header">
+    <div class="header-text_name-style">
+      Курсы
+    </div>
+    <div class="switch-courses-container">
+      <div (click)="coursesStatus = 'actual'" [ngClass]="{'switch-courses-item_active': coursesStatus == 'actual'}" class="switch-courses-item">Актуальные</div>
+      <div (click)="coursesStatus = 'all'" [ngClass]="{'switch-courses-item_active': coursesStatus == 'all'}" class="switch-courses-item">Все</div>
+    </div>
+    <div class="header-text_date-style">
+      <span style="color: var(--text-color-light-gray); font-weight: initial; padding-right: 10px">сегодня</span>
+      {{ currentDate | date:'dd.MM.yyyy' }}
+    </div>
+  </div>
+</div>
+
+<div *ngIf="coursesStatus !== 'all'">
+  <app-courses-list
+    [semesterData]="coursesData[0]">
+  </app-courses-list>
+</div>
+
+<div *ngIf="coursesStatus === 'all'">
+  <app-courses-list
+    *ngFor="let semester of coursesData"
+    [semesterData]="semester"
+    [showSemesterHeader]="true">
+  </app-courses-list>
+</div>

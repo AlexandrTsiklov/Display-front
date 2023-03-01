@@ -1,0 +1,112 @@
+.profile {
+    /*height: var(--profile-height);*/
+    padding: var(--profile-margin-vertical) 0;
+    /*border-bottom: 1px solid var(--border-color);*/
+}
+
+.profile__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.profile__container:hover {
+    cursor: pointer;
+}
+
+.profile__avatar {
+    flex-shrink: 0;
+
+    /* top and bottom space the same as margin left */
+    width: calc(var(--profile-height) - var(--profile-padding-horizontal));
+    height: calc(var(--profile-height) - var(--profile-padding-horizontal));
+
+    margin-right: 10px;
+
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    /*background-image: url('../../../assets/images/ava1.jpg');*/
+    background-size: cover;
+}
+
+.profile__short-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.profile__name {
+    position: relative;
+    font-size: 17px;
+    line-height: 110%;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+    font-weight: 550;
+    color: var(--text-color-dark-gray);
+}
+
+.profile__name:hover {
+    color: black;
+}
+
+.profile__name:active {
+    transform: translateY(1px);
+}
+
+.profile__group {
+    font-size: 14px;
+    color: #999999;
+}
+
+.profile__group-number {
+    font-weight: 550;
+    color: var(--text-color-dark-gray);
+    font-size: 16px;
+}
+
+.dropdown-icon {
+    padding-left: 10px;
+}
+
+.profile__dropdown {
+    position: absolute;
+    top: 105%;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: inset 0 0 3px #dbdbdb;
+    color: var(--text-color-dark-gray);
+    font-weight: 450;
+}
+
+.profile__dropdown-line {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    padding: 9px 10px;
+    border-bottom: 1px solid white;
+    background: #c2c2c2;
+    /*transition-duration: 0.3s;*/
+}
+
+.profile__dropdown-line:first-child {
+    border-radius: 7px 7px 0 0;
+}
+
+.profile__dropdown-line:last-child {
+    border-radius: 0 0 7px 7px;
+}
+
+.profile__dropdown-line:hover {
+    /*background: #b2d1ff;*/
+    /*font-weight: 300;*/
+    /*color: white;*/
+    /*color: #009dff;*/
+    filter: brightness(105%);
+}
+
+.profile__dropdown-line:last-child:hover {
+    color: red;
+}
+

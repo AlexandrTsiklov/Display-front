@@ -1,0 +1,24 @@
+<div class="main__container">
+  <div class="header-name-and-date scholarship-header">
+    <div class="scholarship-header__name header-text_name-style">
+      Стипендия
+    </div>
+    <ul class="scholarship-header__filter-list">
+      <li [ngClass]="{'scholarship-header__filter-item_active': category == 'all'}" class="scholarship-header__filter-item" (click)="filterFrames('all')">
+        Все выплаты
+      </li>
+      <li [ngClass]="{'scholarship-header__filter-item_active': category == 'academic'}" class="scholarship-header__filter-item" (click)="filterFrames('academic')">
+        Академическая
+      </li>
+      <li [ngClass]="{'scholarship-header__filter-item_active': category == 'social'}" class="scholarship-header__filter-item" (click)="filterFrames('social')">
+        Социальная
+      </li>
+    </ul>
+  </div>
+  <div class="scholarship-canvas__year-frame" *ngFor="let yearRecording of scholarshipData">
+    <app-scholarship-total-year-results-frame [year]="yearRecording.year" [sum]="category == 'all' ? yearRecording.sumTotal : category == 'academic' ? yearRecording.sumAcademic : yearRecording.sumSocial"></app-scholarship-total-year-results-frame>
+    <app-scholarship-table-frame *ngIf="category == 'all' || category == 'academic'"  [name]="'Академическая'" [scholarshipRecording]="yearRecording.academicScholarship" [monthSum]="yearRecording.monthPaymentAcademic"></app-scholarship-table-frame>
+    <app-scholarship-table-frame *ngIf="category == 'all' || category == 'social'" [name]="'Социальная'" [scholarshipRecording]="yearRecording.socialScholarship" [monthSum]="yearRecording.monthPaymentAcademic"></app-scholarship-table-frame>
+    <app-scholarship-financial-support-frame *ngIf="category == 'all' || category == 'social'" [financialSupport]="yearRecording.financialSupport"></app-scholarship-financial-support-frame>
+  </div>
+</div>

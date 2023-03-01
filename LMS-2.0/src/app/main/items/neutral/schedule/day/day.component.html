@@ -1,0 +1,23 @@
+<div class="day">
+  <div class="day__container">
+    <div class="day__header">
+      {{ day.russianName }}
+    </div>
+    <div class="day__content">
+      <ul class="day__list">
+        <li class="day__list-item"
+            *ngFor="let lesson of day.lessons"
+            [ngClass]="{'day__list-item_lecture': lesson.type == 'lecture'}">
+          <div class="day__list-item-number">
+            {{ lesson.number }}.
+          </div>
+          <div>
+            {{ lesson.name }}
+            {{ lesson.professorName }}
+            ({{ lesson.classroom }})
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

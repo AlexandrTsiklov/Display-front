@@ -1,0 +1,11 @@
+<hr *ngIf="itemObject.text == 'Литература'" style="margin: 20px 0 20px 0; border: 1px solid #eeeeee; background: #eeeeee;">
+<li class="menu__item">
+  <div class="menu__item-text">
+    <a class="menu__item-link"
+       routerLink="{{ itemObject.url }}"
+       routerLinkActive="menu__item-link_active"
+    >
+      {{ itemObject.text }}
+    </a>
+  </div>
+</li>

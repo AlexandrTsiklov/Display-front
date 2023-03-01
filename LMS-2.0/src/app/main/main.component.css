@@ -1,0 +1,54 @@
+.main__container {
+    padding: var(--main-padding);
+    padding-top: 0;
+}
+
+.main-header-common {
+    padding-left: var(--main-padding);
+    padding-right: var(--main-padding);
+}
+
+.main-content-common {
+    padding-left: var(--main-padding);
+    padding-right: var(--main-padding);
+}
+
+/*===================== children styles ====================*/
+
+.header-only-name {
+    display: flex;
+    align-items: center;
+    height: calc(var(--profile-height) + var(--profile-padding-horizontal));
+}
+
+.header-name-and-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(var(--profile-height) + var(--profile-padding-horizontal));
+}
+
+.header-text_name-style {
+    font-size: 22px;
+    font-weight: 550;
+    color: var(--text-color-dark-gray);
+}
+
+.header-text_date-style {
+    font-size: 18px;
+    font-weight: 550;
+    color: var(--text-color-dark-gray);
+}
+
+.frame {
+    margin-bottom: var(--frame-margin-bottom);
+    padding: 20px var(--frame-horizontal-padding);
+    border-radius: var(--frame-border-radius);
+    background: var(--frame-background);
+    box-shadow: 0 3px 3px #d0d0d0;
+    font-size: var(--frame-font-size);
+}
+
+.frame:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,85 @@
+:root {
+    --background-white: rgb(229, 229, 229);
+    --background-yellow: #f1f2d6;
+    --background-done: rgb(91, 91, 91);
+}
+
+.todoContainer {
+    display: flex;
+    align-items: center;
+    background: var(--background-white);
+    border-radius: 5px;
+    color: black;
+    margin: 0 auto 15px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 420px;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.todoDone{
+    background: none;
+    border: 2px solid var(--background-done);
+    color: var(--background-done);
+}
+
+.todoIconCalendar {
+    font-size: 1.3rem;
+    color: teal;
+    margin-right: 10px;
+}
+
+.text {
+    margin-right: auto;
+}
+
+.action {
+    margin-left: 5px;
+    font-size: 1.2rem;
+    color:rgb(178, 178, 178);
+    transition-duration: 0.3s;
+}
+
+.action:hover {
+    cursor: pointer;
+    scale: 1.3;
+}
+
+.tick:hover {
+    color: teal;
+}
+
+.remove:hover {
+    color: rgb(183, 0, 0);
+}
+
+.todoContainer.todoDone .action,
+.todoContainer.todoDone .todoIconCalendar {
+    color: var(--background-done);
+}
+
+@media (max-width: 700px) {
+    .todoContainer {
+        width: 60% !important;
+    }
+}
+
+.arrowsContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-left: 6px;
+}
+
+.arrow {
+    color: rgb(178, 178, 178);
+    transition-duration: 0.3s;
+}
+
+.arrow:hover {
+    scale: 1.5;
+    color: rgb(180, 4, 255);
+}

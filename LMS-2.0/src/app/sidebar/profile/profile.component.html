@@ -1,0 +1,15 @@
+<div class="profile">
+  <div class="profile__container" (click)="toggleDropdown()">
+    <div class="profile__avatar" style="background-image: url({{ avatarManagerService.activeImage.url }})"></div>
+    <div class="profile__short-info">
+      <div class="profile__name">Виктория <img class="dropdown-icon" src="../../../assets/images/icons/dropdown.svg" alt="lock"><br>Трудолюбивая</div>
+      <div class="profile__group">Группа: <span class="profile__group-number">2072</span></div>
+    </div>
+    <div *ngIf="dropdownIsVisible" class="profile__dropdown">
+      <a class="profile__dropdown-line" routerLink="/profile">Профиль</a>
+      <a class="profile__dropdown-line">Выйти</a>
+    </div>
+  </div>
+</div>
+<hr style="margin: 0 0 20px 0; border: 1px solid #eeeeee; background: #eeeeee;">
+

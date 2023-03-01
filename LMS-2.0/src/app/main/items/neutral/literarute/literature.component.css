@@ -1,0 +1,17 @@
+.literature {
+    display: flex;
+}
+
+.literature__image-container {
+    margin-right: 30px;
+}
+
+.literature__short-info {
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.literature__text {
+    font-size: 17px;
+    color: var(--text-color-medium-gray);
+}

@@ -1,0 +1,16 @@
+<div class="main-header-common">
+  <div class="header-name-and-date">
+    <div class="header-text_name-style">
+      Расписание
+    </div>
+    <div class="header-text_date-style">
+      <span style="color: var(--text-color-light-gray); font-weight: initial; padding-right: 10px">сегодня</span>
+      {{ currentDate | date:'dd.MM.yyyy' }}
+    </div>
+  </div>
+</div>
+<div class="schedule">
+  <div class="schedule__container">
+    <app-schedule-day *ngFor="let day of scheduleData" [day]="day"></app-schedule-day>
+  </div>
+</div>

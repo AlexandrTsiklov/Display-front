@@ -1,0 +1,33 @@
+<div class="term">
+  <div
+    [ngClass]="{
+      'currentTerm': term.averageScore == '',
+      'excellentGrades': +term.averageScore >= 4.5,
+      'goodGrades': +term.averageScore >= 4 && +term.averageScore < 4.5,
+      'badGrades': +term.averageScore < 4 && term.averageScore != ''
+      }"
+    class="term__header">
+    <div class="term__number-of-semester">{{ term.numberOfTerm }} семестр</div>
+    <div *ngIf="term.averageScore != ''" class="term__average-score"><span style="color: rgba(255,255,255,0.95); font-size: var(--frame-font-size); padding-right: 10px;">средний балл</span> {{ term.averageScore }}</div>
+  </div>
+  <div class="term__table-container">
+    <table class="term__subjects-table">
+      <thead>
+        <tr>
+          <td class="term__subjects-item term__subjects-item-thead">Предмет</td>
+          <td class="term__subjects-item term__subjects-item-thead">Вид отчетности</td>
+          <td class="term__subjects-item term__subjects-item-thead term__subjects-item_centred">Рейтинг</td>
+          <td class="term__subjects-item term__subjects-item-thead term__subjects-item_centred">Оценка</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="term__subjects-row" *ngFor="let subject of term.subjects">
+          <td class="term__subjects-item">{{ subject.name }}</td>
+          <td class="term__subjects-item term__subjects-item_padding">{{ subject.kindOfTest }}</td>
+          <td class="term__subjects-item term__subjects-item_centred">{{ subject.rating }}</td>
+          <td class="term__subjects-item term__subjects-item_centred">{{ subject.score }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

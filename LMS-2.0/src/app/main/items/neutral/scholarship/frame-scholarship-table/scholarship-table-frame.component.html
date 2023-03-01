@@ -1,0 +1,40 @@
+<div class="frame scholarship-table">
+  <div class="scholarship-table__header">
+    <div>
+      <span class="scholarship-table__header-text">{{ name }} стипендия</span>
+    </div>
+    <div>
+      <span class="scholarship-table__header-sum">{{ monthSum }} руб.</span>
+    </div>
+  </div>
+  <hr style="margin-bottom: 20px; background: #eeeeee; border: 1px solid  #eeeeee;">
+  <div class="scholarship-table__actual-accruals">Фактические начисления</div>
+  <div class="scholarship-table__container">
+    <div
+      *ngFor="let monthData of scholarshipRecording"
+      class="scholarship-table__item">
+        <div *ngIf="monthData.sum != ''" class="scholarship-table__item_fill">
+          <div class="scholarship-table__item-header">
+            {{ monthData.month }}
+          </div>
+          <div class="scholarship-table__item-main">
+            <div class="scholarship-table__item-main-tick">
+              <img src="../../../../../../assets/images/icons/tick.svg" height="20" alt="lock">
+            </div>
+            <div class="scholarship-table__item-main-sum">{{ monthData.sum }} руб.</div>
+            <div class="scholarship-table__item-main-date">{{ monthData.date }}</div>
+          </div>
+        </div>
+        <div *ngIf="monthData.sum == ''" class="scholarship-table__item_empty">
+          <div class="scholarship-table__item-header scholarship-table__item-header_inactive">
+            {{ monthData.month }}
+          </div>
+          <div class="scholarship-table__item-main scholarship-table__item-main_inactive">
+            <img src="../../../../../../assets/images/icons/lock.svg" height="26" alt="lock">
+          <div>
+        </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>

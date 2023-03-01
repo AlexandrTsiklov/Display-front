@@ -1,0 +1,95 @@
+<div class="main-header-common">
+  <div class="header-only-name">
+    <div class="header-text_name-style">
+      Трудолюбивая Виктория Александоровна
+    </div>
+  </div>
+</div>
+<div class="main-content-common">
+  <div class="profile-main__wrapper">
+    <div class="profile-edit__header-text">Изменение аватара</div>
+    <div class="profile-edit__image-section-wrapper">
+      <div class="profile-edit__section profile-edit__images-default-section">
+        <div
+          class="profile-edit__image-container"
+          (click)="avatarManagerService.setAvatar(avatarManagerService.defaultImage.name)"
+          style="background-image: url({{ avatarManagerService.defaultImage.url }})"
+          [ngClass]="{'profile-edit__image-container_active': avatarManagerService.defaultImage.active}">
+          <div class="profile-edit__image-blackout"></div>
+        </div>
+        <label for="upload-img" class="profile-edit__image-container profile-edit__image-container_upload-photo">
+          <div class="profile-edit__image-blackout profile-edit__image_colored"></div>
+          <img src="../../../../assets/images/icons/upload1.svg" width="40px" alt="upload">
+          <div class="profile-edit__upload-photo-text">Загрузить</div>
+          <input type="file" id="upload-img" name="upload-img" accept="image/*" style="display: none;">
+        </label>
+      </div>
+      <div class="profile-edit__section profile-edit__images-personal-section">
+        <button class="skip-image" (click)="spinCarouselBack()">
+          <img src="../../../../assets/images/icons/arrow2-left.svg" class="arrow" alt="prev">
+        </button>
+        <div
+          class="profile-edit__image-container"
+          (click)="avatarManagerService.setAvatar(image.name)"
+          style="background-image: url({{ image.url }})"
+          [ngClass]="{'profile-edit__image-container_active': image.active}">
+          <div class="profile-edit__image-blackout"></div>
+        </div>
+        <button class="skip-image" (click)="spinCarouselForward()">
+          <img src="../../../../assets/images/icons/arrow2-right.svg" class="arrow" alt="next">
+        </button>
+      </div>
+    </div>
+    <div class="profile-edit__header-text">Персональные данные</div>
+    <div class="profile-edit__section-wrapper">
+      <div class="profile-edit__field-updating-container">
+        <label for="profile-edit-number" class="profile-edit__field-updating-label">Телефон</label>
+        <input
+          type="text"
+          id="profile-edit-number"
+          class="profile-edit__field-updating-input"
+          [(ngModel)]="defaultNumber"
+          (ngModelChange)="activateSaveButton1()">
+      </div>
+      <div class="profile-edit__field-updating-container">
+        <label for="profile-edit-email" class="profile-edit__field-updating-label">E-mail</label>
+        <input
+          type="text"
+          id="profile-edit-email"
+          class="profile-edit__field-updating-input"
+          [(ngModel)]="defaultEmail"
+          (ngModelChange)="activateSaveButton1()">
+      </div>
+    </div>
+    <button *ngIf="saveEmailButtonIsActive || saveNumberButtonIsActive" class="profile-edit__button-save">Сохранить</button>
+    <div class="profile-edit__header-text">Изменение пароля</div>
+    <div class="profile-edit__section-wrapper">
+      <div class="profile-main">
+        <div class="profile-edit__field-updating-container">
+          <label for="profile-edit-old-password" class="profile-edit__field-updating-label">Текущий пароль</label>
+          <input
+            type="password"
+            id="profile-edit-old-password"
+            class="profile-edit__field-updating-input"
+            placeholder="********">
+        </div>
+        <div class="profile-edit__field-updating-container">
+          <label for="profile-edit-new-password" class="profile-edit__field-updating-label">Новый пароль</label>
+          <input
+            type="password"
+            id="profile-edit-new-password"
+            class="profile-edit__field-updating-input"
+            placeholder="********">
+        </div>
+        <div class="profile-edit__field-updating-container">
+          <label for="profile-edit-new-password-repeat" class="profile-edit__field-updating-label">Повторение нового пароля</label>
+          <input
+            type="password"
+            id="profile-edit-new-password-repeat"
+            class="profile-edit__field-updating-input"
+            placeholder="********">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

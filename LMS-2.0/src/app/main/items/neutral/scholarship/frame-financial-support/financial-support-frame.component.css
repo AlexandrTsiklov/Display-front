@@ -1,0 +1,26 @@
+.scholarship-canvas__financial-support-frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scholarship-canvas__financial-support-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.scholarship-canvas__financial-support-text-name {
+    margin-bottom: 6px;
+}
+
+.scholarship-canvas__financial-support-money {
+    font-weight: 550;
+    color: var(--text-color-dark-gray);
+}
+
+.scholarship-canvas__financial-support-text-date {
+    font-size: calc(var(--frame-font-size) - 2px);
+    color: var(--text-color-light-gray)
+}

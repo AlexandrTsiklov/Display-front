@@ -1,0 +1,101 @@
+.scholarship-table__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.scholarship-table__header-text {
+    font-weight: 550;
+}
+
+.scholarship-table__header-sum {
+    font-size: 22px;
+    font-weight: 550;
+    color: var(--text-color-dark-gray);
+}
+
+.scholarship-table__actual-accruals {
+    margin-bottom: 20px;
+    color: var(--text-color-medium-gray);
+}
+
+.scholarship-table {
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+.scholarship-table__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-template-rows: repeat(auto-fill, var( --scholarship-table-item-size));
+
+    justify-content: start;
+    grid-gap: 40px;
+}
+
+.scholarship-table__item {
+    background: white;
+}
+
+.scholarship-table__item_fill {
+    /*border: 1px solid #BABABA;*/
+}
+
+.scholarship-table__item_empty {
+    border: 1px dashed #BABABA;
+    border-radius: 8px;
+}
+
+.scholarship-table__item-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(var( --scholarship-table-item-size) * 0.3);
+    border: 1px solid #C6ED9E;
+    border-radius: 7px 7px 0 0;
+    background: #C6ED9E;
+    font-weight: 550;
+    color: var(--text-color-dark-gray);
+}
+
+.scholarship-table__item-header_inactive {
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #c6c6c6;
+    color: var(--text-color-light-gray)
+}
+
+.scholarship-table__item-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(var( --scholarship-table-item-size) * 0.7);
+    border: 1px solid #dcdcdc;
+    border-radius: 0 0 8px 8px;
+}
+
+.scholarship-table__item-main_inactive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(var( --scholarship-table-item-size) * 0.7);
+    border: none;
+}
+
+.scholarship-table__item-main-tick {
+    /*transform: translateY(-20%);*/
+}
+
+.scholarship-table__item-main-sum {
+    font-weight: 550;
+    flex-shrink: 0;
+    margin-bottom: 6px;
+}
+
+.scholarship-table__item-main-date {
+    font-size: calc(var(--frame-font-size) - 4px);
+    color: var(--text-color-light-gray)
+}
